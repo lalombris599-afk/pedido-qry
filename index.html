@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Recibido</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #ffe600; /* Amarillo tipo Mercado Libre */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .card{
+        background: white;
+        width: 320px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .logo{
+        font-weight: bold;
+        font-size: 20px;
+        color: #3483fa; /* Azul estilo ML */
+        margin-bottom: 10px;
+    }
+
+    .status{
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .btn{
+        background-color: #3483fa;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover{
+        background-color: #2968c8;
+    }
+
+    .mensaje{
+        margin-top: 20px;
+        font-size: 16px;
+        color: #2e7d32;
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn{
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="logo">📦 Pedido Entregado</div>
+    <div class="status">Tu paquete llegó correctamente</div>
+
+    <button class="btn" onclick="mostrarMensaje()">Recibido</button>
+
+    <div class="mensaje" id="mensaje">
+        Espero que te guste tu regalo, te amo mucho, con todo mi corazón jsjsjsjjs. <br>
+        Come pan y dale un besito a tu novia .-.
+    </div>
+</div>
+
+<script>
+function mostrarMensaje(){
+    document.getElementById("mensaje").style.display = "block";
+}
+</script>
+
+</body>
+</html>
